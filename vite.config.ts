@@ -18,6 +18,12 @@ export default defineConfig({
       '@': resolve(__dirname, './src'),
     },
   },
+  css: {
+    modules: {
+      generateScopedName: '[name]_[local]_[hash:base64:5]',
+      hashPrefix: 'prefix',
+    },
+  },
   base: './',
   server: {
     port: 4000,
